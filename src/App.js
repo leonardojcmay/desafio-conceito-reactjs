@@ -34,7 +34,7 @@ function App() {
       });
 
       //Atualizando a página automaticamente após a exclusão, para retirar o caso deletado da lista
-      setRepositories(repositories.filter(repository => repository.id !== id));//Retornar todos os incidentes diferentes deste id excluido
+      setRepositories(repositories.filter(repository => repository.id !== id));//Retornar todos os repository diferentes deste id excluido
 
       } catch (err) {
           alert('Erro ao deletar caso, tente novamente.')
@@ -50,7 +50,7 @@ function App() {
           <li key={repository.id}>
             
             <ul>
-                {/*percorrer os projects retornando algo */}
+                {/*percorrer os repositories retornando algo */}
                 <li key={repository.id}>{repository.title}</li>
             </ul>
 
